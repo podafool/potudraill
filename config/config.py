@@ -35,14 +35,14 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/TheTeamInsane/TeamInsaneMusic",
+    "https://github.com/SVDsong/SVD-insane",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", None)
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", None)
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/universe_we_are")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/SVD_support_group")
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
 
@@ -78,7 +78,7 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "AQB8EIANaYCxSqCcp4EEOvl91XzSs6N4-TeqE_qk7cFOyjJ0k7i1tqaHw3btmtKWqqkAUbUjOlgAxea-vKKy8RkQ9girTMHqIXc8wFdd5Sl5IKX04dg-l7YPX7EygzUUsJtjNh5bd13otsY9KYCtInNYOBt3sDGlaSGdcMuxxNANflEEq1_UJu1c8oMBPT6UENpCj3nDceS6qowGK7_7uVCPpGnLmmWsIuoWM1Bbc1aCJmpqfcjhUDmgtlaqjIpj0qXEG7jemyYqF0Vh9FKgWA8ifMf9fqWWlQiwvkC6YxVichlsfF9xKo4W0X4EgInxRvvSOdf5k6X2b7ctm28-9TD3AAAAAWm6r8kA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
