@@ -10,11 +10,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     InsaneMusic = math.floor(percentage)
     if 0 < InsaneMusic <= 10:
-        bar = "𖢵—————————"
+        bar = "︻╦╤─--  "
     elif 10 < InsaneMusic < 20:
-        bar = "—𖢵————————"
+        bar = "—︻╦╤─---"
     elif 20 <= InsaneMusic < 30:
-        bar = "——𖢵———————"
+        bar = "——︻╦╤─----"
     elif 30 <= InsaneMusic < 40:
         bar = "———𖢵——————"
     elif 40 <= InsaneMusic < 50:
