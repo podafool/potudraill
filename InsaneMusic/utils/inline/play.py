@@ -50,7 +50,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         [
             InlineKeyboardButton(text="╘ vPs ╛", url=f"https://t.me/we_are_universee"),
             InlineKeyboardButton(
-                text="Fₒₗₗₒw", url=f"https://t.me/SVD_support_group"
+                text="╘ Fₒₗₗₒw ╛", url=f"https://t.me/SVD_support_group"
             ),
         ],
     ]
