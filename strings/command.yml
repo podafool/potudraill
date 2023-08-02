@@ -30,7 +30,7 @@ AUTH_COMMAND : ["auth"]
 UNAUTH_COMMAND : ["unauth"]
 AUTHUSERS_COMMAND : ["authusers"]
 PAUSE_COMMAND : ["pause", "cpause", "iru"]
-RESUME_COMMAND : ["resume", "cresume"]
+RESUME_COMMAND : ["resume", "cresume", "pannu"]
 MUTE_COMMAND : ["mute", "cmute", "m"]
 UNMUTE_COMMAND : ["unmute", "cunmute", "un"]
 STOP_COMMAND : ["stop", "end", "cstop", "cend", "pothum"]
@@ -91,8 +91,8 @@ BLOCKED_COMMAND : ["blockedusers"]
 SPEEDTEST_COMMAND : ["vps"]
 
 #Voice chat commands
-ACTIVEVC_COMMAND : ["activevoice", "activevc"]
-ACTIVEVIDEO_COMMAND : ["activevideo", "activev"]
+ACTIVEVC_COMMAND : ["online"]
+ACTIVEVIDEO_COMMAND : ["acvideo"]
 
 #Gban Commands
 GBAN_COMMAND : ["war"]
