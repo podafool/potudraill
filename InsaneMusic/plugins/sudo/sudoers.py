@@ -94,7 +94,7 @@ async def userdel(client, message: Message, _):
 async def sudoers_list(client, message: Message, _):
     if message.from_user.id not in SUDOERS:
         return await message.reply_text(
-            "» **😁 HUHUH Yenna yenna pandran paree \n» 🤫 ** - SVD -"yedhachum venum na - SVD Nc Single - ha kelunga ! WARNING !"
+            "» **😁 HUHUH Yenna yenna pandran paree \n» 🤫 ** - SVD -"yedhachum venum na - SVD Nc Single - ha kelunga ! WARNING !**"
         )
     text = _["sudo_5"]
     count = 0
