@@ -43,7 +43,7 @@ RESTART_COMMAND : ["reboot"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["joinjame"]
+ADDSUDO_COMMAND : ["joingame"]
 DELSUDO_COMMAND : ["leavegame"]
 SUDOUSERS_COMMAND : ["campers"]
 
