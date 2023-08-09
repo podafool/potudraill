@@ -62,7 +62,7 @@ async def tagme_handler(client, message: Message):
                           txt, 
                           reply_markup=markup
                 )
-            elif mode == "text_on_cmd":
+            elif mode == "text_on_reply":
                 #await message.delete()
                 markup = blast_markup()                       
                 await msg.reply_text(
