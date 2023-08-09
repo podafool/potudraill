@@ -1,11 +1,11 @@
-from YukkiMusic import app 
+from InsaneMusic import app 
 import asyncio
 import random
 from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import ChatPermissions, Message
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from YukkiMusic.plugins.modules.blast import blast_markup
+from InsaneMusic.plugins.modules.blast import blast_markup
 
 spam_chats = []
 
@@ -94,7 +94,7 @@ TAGMES = [ " **Hey inga va veh nee** ",
            ]
 ALONE = ["😊", "👋", "🌞", "🌛"]
 
-@app.on_message(filters.command(["tagalls", "alls", "tagmembers"], prefixes=["/", "@", "!"]))
+@app.on_message(filters.command(["tags", "alls", "tagmembers"], prefixes=["/", "@", "!"]))
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == "private":
@@ -238,7 +238,7 @@ async def tagme_handler(client, message: Message):
                 )
 
             # Generate a random sleep time between 10 and 30 seconds(0 and 5 seconds)
-            sleep_time = random.randint(0, 5)
+            sleep_time = random.randint(0, 7)
             await asyncio.sleep(sleep_time)
 
             usrnum = 0
@@ -257,4 +257,3 @@ async def on_callback_query(client, events):
               morning_quote = f"Good morning {events.from_user.mention}! Here's a beautiful quote to start your day:\n\n""Life is what happens when you're busy making other plans. - John Lennon"                             
               await events.answer(f"Getting..")
               await events.message.edit_text(morning_quote)              
-             
