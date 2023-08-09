@@ -144,7 +144,7 @@ async def mentionall(client, message):
                 mode == "text_on_reply"
                 print("text on reply mode")
                 await msg.reply(f"[{random.choice(ALONE)}](tg://user?id={usr.user.id})")
-            await asyncio.sleep(0.9)
+            await asyncio.sleep(2.5)
             usrnum = 0
             usrtxt = ""
     try:
