@@ -59,10 +59,10 @@ async def tagme_handler(client, message: Message):
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
                 markup = blast_markup()                    
                 await message.reply_text(
-                          txt, 
-                          reply_markup=markup
+                          f"[{random.choice(TAGMES)}](tg://user?id={usr.user.id})", 
+                          #reply_markup=markup
                 )
-            elif mode == "text_on_cmd":
+            elif mode == "text_on_reply":
                 #await message.delete()
                 markup = blast_markup()                       
                 await msg.reply_text(
