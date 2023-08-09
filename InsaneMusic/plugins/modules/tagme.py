@@ -1,4 +1,12 @@
 # Assuming you have defined the client object and necessary setup for the Telegram bot
+from InsaneMusic import app 
+import asyncio
+import random
+from pyrogram import Client, filters
+from pyrogram.errors import UserNotParticipant
+from pyrogram.types import ChatPermissions, Message
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from InsaneMusic.plugins.modules.blast import blast_markup
 
 spam_chats = []
 
