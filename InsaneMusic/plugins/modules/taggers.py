@@ -121,7 +121,7 @@ async def tagu_handler(client, message: Message):
             
             
             # Generate a random sleep time between 10 and 30 seconds
-            sleep_time = random.randint(5, 10)
+            sleep_time = random.randint(5, 7)
             await asyncio.sleep(sleep_time)
 
             usrnum = 0
