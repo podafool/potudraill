@@ -85,7 +85,7 @@ async def tagme_handler(client, message: Message):
 @app.on_message(filters.command(["break"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu: /stop , /delete")
+        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu: /cancel , /delete")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
