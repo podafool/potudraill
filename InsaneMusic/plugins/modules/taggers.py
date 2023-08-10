@@ -121,7 +121,7 @@ async def tagu_handler(client, message: Message):
             
             
             # Generate a random sleep time between 10 and 30 seconds
-            sleep_time = random.randint(0, 5)
+            sleep_time = random.randint(5, 10)
             await asyncio.sleep(sleep_time)
 
             usrnum = 0
@@ -132,7 +132,7 @@ async def tagu_handler(client, message: Message):
     except:
         pass
 
-@app.on_message(filters.command(["delete"]))
+@app.on_message(filters.command(["cancel", "stop"]))
 async def cancel_spam(client, message: Message):
     if not message.chat.id in spam_chats:
         return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**")
