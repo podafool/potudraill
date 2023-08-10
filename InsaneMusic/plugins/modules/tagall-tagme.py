@@ -1,3 +1,5 @@
+# /tags - /cancel
+
 from InsaneMusic import app 
 import asyncio
 import random
@@ -151,10 +153,10 @@ async def mentionall(client, message):
     except:
         pass
 
-@app.on_message(filters.command(["cancel", "stop"]))
+@app.on_message(filters.command(["cancel"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply(f"**innum arambikave illa ley**\n{message.from_user.mention}\n**1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\n illana ithu try pannu :\n /delete - **/ tagu** command ku\n /break - **/ tagme** command ku")
+        return await message.reply(f"**innum arambikave illa ley**\n{message.from_user.mention}\n**1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\n illana ithu try pannu :\n/delete - / tagu command ku\n/break - / tagme command ku")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
