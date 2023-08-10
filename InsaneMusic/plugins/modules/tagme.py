@@ -82,6 +82,27 @@ async def tagme_handler(client, message: Message):
     except:
         pass
 
+@app.on_message(filters.command(["break"]))
+async def cancel_spam(client, message):
+    if not message.chat.id in spam_chats:
+        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu: /stop , /delete")
+    is_admin = False
+    try:
+        participant = await client.get_chat_member(message.chat.id, message.from_user.id)
+    except UserNotParticipant:
+        is_admin = False
+    else:
+        if participant.status in ("administrator", "creator"):
+            is_admin = True
+    if not is_admin:
+        return await message.reply("**ithu than thavarana seyal - niruvagi kitta kelunga (admins)...**")
+    else:
+        try:
+            spam_chats.remove(message.chat.id)
+        except:
+            pass
+        return await message.reply("**yevan da niruthunathu irrunga da varen**")
+
 @app.on_callback_query(filters.regex("^blast$"))
 async def on_callback_query(client, events):
     print("Callback query received:", events.data)
