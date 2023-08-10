@@ -28,8 +28,8 @@ async def tagme_handler(client, message: Message):
     elif message.text:
     #elif message.matches[0].group(1):
         mode = "text_on_cmd"
-        #msg = message.text
-        msg = message.matches[0].group(1)
+        msg = message.text
+        #msg = message.matches[0].group(1)
     elif message.reply_to_message:
         #mode = "text_on_reply"
         #msg = message.reply_to_message
