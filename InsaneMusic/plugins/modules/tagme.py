@@ -24,7 +24,7 @@ async def tagme_handler(client, message: Message):
 
     #if message.reply_to_message and message.text:
     if message.matches[0].group(1) and message.reply_to_message:
-        return await message.reply("/tagme ** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ uh ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+        return await message.reply("/tagme ** ᴛʀʏ uh ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ uh ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
     #elif message.text:
     elif message.matches[0].group(1):
         mode = "text_on_cmd"
@@ -34,10 +34,11 @@ async def tagme_handler(client, message: Message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         #msg = await app.get_messages(message.chat.id, message.reply_to_message.message_id)
-        if msg is None:
-            return await message.reply("I cannot mention msgs sent before I was added in group")
+        #if msg is None:
+            #return await message.reply("I cannot mention msgs sent before I was added in group")
+        return await message.reply("/tagme ** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ uh ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
     else:
-        return await message.reply("Reply to message or give me a message for mentioning - [ yaraiyavathu tag panni command kudungal ]")
+        return await message.reply("/tagme ** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
               
     spam_chats.append(chat_id)
     usrnum = 0
@@ -55,7 +56,7 @@ async def tagme_handler(client, message: Message):
         usrtxt += f"{usr.user.mention}"
 
         if usrnum == 1:
-            if mode == "text_on_reply":
+            if mode == "text_on_cmd":
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
                 markup = blast_markup()                    
                 await message.reply_text(
