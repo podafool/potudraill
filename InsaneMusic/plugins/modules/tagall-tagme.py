@@ -155,7 +155,7 @@ async def mentionall(client, message):
 @app.on_message(filters.command(["cancel", "stop"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\n illana ithu try pannu : /delete , /break")
+        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\n illana ithu try pannu :\n/delete - / tagu command ku\n/break - / tagme command ku")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
