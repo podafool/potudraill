@@ -57,15 +57,12 @@ async def tagme_handler(client, message: Message):
 
         if usrnum == 1:
             if mode == "text_on_cmd":
-                txt = f"{usrtxt} {random.choice(TAGMES)}"
-                markup = blast_markup()                    
-                await message.reply_text(
-                          f"[{random.choice(TAGMES)}](tg://user?id={usr.user.id})", 
-                          #reply_markup=markup
-                )
+                txt = f"[{random.choice(TAGMES)}](tg://user?id={usr.user.id})"
+                #markup = blast_markup()                    
+                await client.send_message(chat_id, txt)
             elif mode == "text_on_reply":
                 #await message.delete()
-                markup = blast_markup()                       
+                #markup = blast_markup()                       
                 await msg.reply_text(
                           f"[{random.choice(EMOJI)}](tg://user?id={usr.user.id})", 
                           #reply_markup=markup
