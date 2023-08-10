@@ -15,7 +15,7 @@ from typing import Union
 spam_chats = []
 
 TAGMES = ["good morning", "good evening", "good night", "good afternoon"]
-EMOJI = ["😊", "👋", "🌞", "🌙"]
+EMOJI = [ "👋", "🌞", "🌙"]
 
 COMMENTS = [
 "saptiya nee - 1",
