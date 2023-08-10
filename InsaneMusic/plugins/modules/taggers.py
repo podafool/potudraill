@@ -132,8 +132,8 @@ async def tagu_handler(client, message: Message):
     except:
         pass
 
-@app.on_message(filters.command(["cancel", "stop"]))
-async def cancel_spam(client, message):
+@app.on_message(filters.command(["delete"]))
+async def cancel_spam(client, message: Message):
     if not message.chat.id in spam_chats:
         return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**")
     is_admin = False
