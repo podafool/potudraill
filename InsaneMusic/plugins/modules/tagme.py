@@ -24,7 +24,7 @@ async def tagme_handler(client, message: Message):
 
     if message.reply_to_message and message.text:
     #if message.matches[0].group(1) and message.reply_to_message:
-        return await message.reply("**Msg tag pannaatha..\n\n/tagme nu thaniya podu ve-nn-a*")
+        return await message.reply("**Msg tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
     elif message.text:
     #elif message.matches[0].group(1):
         mode = "text_on_cmd"
