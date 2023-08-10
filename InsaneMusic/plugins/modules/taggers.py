@@ -151,7 +151,7 @@ async def cancel_spam(client, message: Message):
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("**yevan da niruthunathu irrunga da varen**")
+        return await message.reply("**Nee than niruthunatha** {message.from_user.mention} **Irrunga varen .. 🛵**")
 
 @app.on_callback_query(filters.regex("open_me"))
 async def on_open_me_button_click(client, etho: Union[types.Message, types.CallbackQuery]):
