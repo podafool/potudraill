@@ -135,7 +135,7 @@ async def tagu_handler(client, message: Message):
 @app.on_message(filters.command(["delete"]))
 async def cancel_spam(client, message: Message):
     if not message.chat.id in spam_chats:
-        return await message.reply("**innum arambikave illa ley\n{message.from_user.mention}\n1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu:\n/cancel - / tags, / alls command ku\n/break - / tagme command ku")
+        return await message.reply(f"**innum arambikave illa ley\n{message.from_user.mention}\n1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu:\n/cancel - / tags, / alls command ku\n/break - / tagme command ku")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -145,7 +145,7 @@ async def cancel_spam(client, message: Message):
         if participant.status in ("administrator", "creator"):
             is_admin = True
     if not is_admin:
-        return await message.reply("**ithu than thavarana seyal\n{message.from_user.mention}\nNiruvagi kitta kelunga (admins)...**")
+        return await message.reply(f"**ithu than thavarana seyal\n{message.from_user.mention}\nNiruvagi kitta kelunga (admins)...**")
     else:
         try:
             spam_chats.remove(message.chat.id)
