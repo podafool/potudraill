@@ -19,12 +19,12 @@ EMOJI = ["😊", "👋", "🌞", "🌙","❤️", "💚", "💙", "💜", "🖤"
 async def tagme_handler(client, message: Message):
     chat_id = message.chat.id
     if chat_id in spam_chats:
-        await message.reply("The tagme command use pannitenga 🌝.")
+        await message.reply("Tagme command already use pannitenga 🌝.")
         return
 
     if message.reply_to_message and message.text:
     #if message.matches[0].group(1) and message.reply_to_message:
-        return await message.reply("/tagme ** ᴛʀʏ uh ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ uh ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+        return await message.reply("**Msg tag pannaatha..\n\n/tagme nu thaniya podu ve-nn-a*")
     elif message.text:
     #elif message.matches[0].group(1):
         mode = "text_on_cmd"
@@ -36,9 +36,9 @@ async def tagme_handler(client, message: Message):
         #msg = await app.get_messages(message.chat.id, message.reply_to_message.message_id)
         #if msg is None:
             #return await message.reply("I cannot mention msgs sent before I was added in group")
-        return await message.reply("/tagme ** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ uh ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+        return await message.reply("**Msg tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
     else:
-        return await message.reply("/tagme ** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+        return await message.reply("**Msg tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
               
     spam_chats.append(chat_id)
     usrnum = 0
@@ -86,7 +86,7 @@ async def tagme_handler(client, message: Message):
 @app.on_message(filters.command(["break"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu: /cancel , /delete")
+        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu:\n/cancel - **/tags** command ku,\n/delete - **/tagu** command ku")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
