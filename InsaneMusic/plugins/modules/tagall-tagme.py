@@ -112,7 +112,7 @@ async def mentionall(client, message):
         return await message.reply("**ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!**")
 
     if message.reply_to_message and message.text:
-        return await message.reply("/tagme hello 🔫** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+        return await message.reply("/tagme 🔫** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
     elif message.text:
         mode = "text_on_cmd"
         msg = message.text
@@ -120,9 +120,9 @@ async def mentionall(client, message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("/tagme hii 🔫 **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+            return await message.reply("/tagme 🔫 **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
     else:
-        return await message.reply("/tagme hii 🔫 **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+        return await message.reply("/tagme 🔫 **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
 
     spam_chats.append(chat_id)
     usrnum = 0
