@@ -132,6 +132,27 @@ async def tagu_handler(client, message: Message):
     except:
         pass
 
+@app.on_message(filters.command(["cancel", "stop"]))
+async def cancel_spam(client, message):
+    if not message.chat.id in spam_chats:
+        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**")
+    is_admin = False
+    try:
+        participant = await client.get_chat_member(message.chat.id, message.from_user.id)
+    except UserNotParticipant:
+        is_admin = False
+    else:
+        if participant.status in ("administrator", "creator"):
+            is_admin = True
+    if not is_admin:
+        return await message.reply("**ithu than thavarana seyal - niruvagi kitta kelunga (admins)...**")
+    else:
+        try:
+            spam_chats.remove(message.chat.id)
+        except:
+            pass
+        return await message.reply("**yevan da niruthunathu irrunga da varen**")
+
 @app.on_callback_query(filters.regex("open_me"))
 async def on_open_me_button_click(client, etho: Union[types.Message, types.CallbackQuery]):
     print("Callback query received:", etho.message.text)
