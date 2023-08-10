@@ -92,9 +92,8 @@ TAGMES = [ " **Hey inga va veh nee** ",
            " **inga oruthan irrupan nalla parru yunnakula irrukpan ana irrukamatan avan yar??😻** ",
            " **ama nee yaru sollu ?🙃** ",
            ]
-ALONE = ["😊", "👋", "🌞", "🌛"]
 
-@app.on_message(filters.command(["tags", "alls", "tagmembers"], prefixes=["/", "@", "!", "#"]))
+@app.on_message(filters.command(["tags"], prefixes=["/", "@", "!", "#"]))
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == "private":
@@ -109,10 +108,10 @@ async def mentionall(client, message):
         if participant.status in ("administrator", "creator"):
             is_admin = True
     if not is_admin:
-        return await message.reply("**ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!**")
+        return await message.reply(f"**ithu thaan thavarana seyal\n{message.from_user.mention}\nNiruvagi kitta kelunga (admins)...**")
 
     if message.reply_to_message and message.text:
-        return await message.reply("/tagme 🔫** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+        return await message.reply("**Msg ah tag pannaatha..**\n\n/tags **nu thaniya podu ve-nn-a**")
     elif message.text:
         mode = "text_on_cmd"
         msg = message.text
@@ -120,9 +119,9 @@ async def mentionall(client, message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("/tagme 🔫 **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+            return await message.reply("**Msg ah tag pannaatha..**\n\n/tags **nu thaniya podu ve-nn-a**")
     else:
-        return await message.reply("/tagme 🔫 **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+        return await message.reply("**Msg ah tag pannaatha..**\n\n/tags **nu thaniya podu ve-nn-a**")
 
     spam_chats.append(chat_id)
     usrnum = 0
@@ -155,7 +154,7 @@ async def mentionall(client, message):
 @app.on_message(filters.command(["cancel", "stop"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\n illana ithu try pannu :\n/delete - / tagu command ku\n/break - / tagme command ku")
+        return await message.reply(f"**innum arambikave illa ley**\n{message.from_user.mention}\n**1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\n illana ithu try pannu :\n/delete - **/ tagu** command ku\n/break - **/ tagme** command ku")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -165,10 +164,10 @@ async def cancel_spam(client, message):
         if participant.status in ("administrator", "creator"):
             is_admin = True
     if not is_admin:
-        return await message.reply("**ithu than thavarana seyal - niruvagi kitta kelunga (admins)...**")
+        return await message.reply(f"**ithu than thavarana seyal**\n{message.from_user.mention}\n**Niruvagi kitta kelunga (admins)...**")
     else:
         try:
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("**yevan da niruthunathu irrunga da varen**")
+        return await message.reply(f"**Nee than niruthunatha**\n{message.from_user.mention}\n**Irrunga varen .. 🛵**")
