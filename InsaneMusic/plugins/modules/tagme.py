@@ -19,12 +19,12 @@ EMOJI = ["😊", "👋", "🌞", "🌙","❤️", "💚", "💙", "💜", "🖤"
 async def tagme_handler(client, message: Message):
     chat_id = message.chat.id
     if chat_id in spam_chats:
-        await message.reply("Tagme command already use pannitenga 🌝.")
+        await message.reply(f"Tagme command already oditu irukku 🌝 \n{message.from_user.mention}")
         return
 
     if message.reply_to_message and message.text:
     #if message.matches[0].group(1) and message.reply_to_message:
-        return await message.reply("**Msg tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
+        return await message.reply("**Msg ah tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
     elif message.text:
     #elif message.matches[0].group(1):
         mode = "text_on_cmd"
@@ -36,9 +36,9 @@ async def tagme_handler(client, message: Message):
         #msg = await app.get_messages(message.chat.id, message.reply_to_message.message_id)
         #if msg is None:
             #return await message.reply("I cannot mention msgs sent before I was added in group")
-        return await message.reply("**Msg tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
+        return await message.reply("**Msg ah tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
     else:
-        return await message.reply("**Msg tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
+        return await message.reply("**Msg ah tag pannaatha..**\n\n/tagme **nu thaniya podu ve-nn-a**")
               
     spam_chats.append(chat_id)
     usrnum = 0
@@ -86,7 +86,7 @@ async def tagme_handler(client, message: Message):
 @app.on_message(filters.command(["break"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("**innum arambikave illa ley 1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu:\n/cancel - **/ tags** command ku,\n/delete - **/ tagu** command ku")
+        return await message.reply(f"**innum arambikave illa ley\n{message.from_user.mention}\n1st start pannu hehe apparam end pannu ! athayum thapa panatha ...**\n\nillana ithu try pannu:\n/cancel - **/ tags** command ku,\n/delete - **/ tagu** command ku")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -96,13 +96,13 @@ async def cancel_spam(client, message):
         if participant.status in ("administrator", "creator"):
             is_admin = True
     if not is_admin:
-        return await message.reply("**ithu than thavarana seyal - niruvagi kitta kelunga (admins)...**")
+        return await message.reply(f"**ithu thaan thavarana seyal\n{message.from_user.mention}\nNiruvagi kitta kelunga (admins)...**")
     else:
         try:
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("**yevan da niruthunathu irrunga da varen**")
+        return await message.reply(f"**Nee thaan niruthunatha**\n{message.from_user.mention}\n**Irrunga varen .. 🛵**")
 
 @app.on_callback_query(filters.regex("^blast$"))
 async def on_callback_query(client, events):
