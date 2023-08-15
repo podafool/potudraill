@@ -109,7 +109,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
         img = await gen_thumb(videoid, user_id)
-        run = await message.reply_photo(
+        run = await message.reply_video(
             photo=img,
             caption=_["stream_1"].format(
                 user,
@@ -136,7 +136,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
         img = await gen_thumb(videoid, chat_id)
-        run = await message.reply_photo(
+        run = await message.reply_video(
             photo=img,
             caption=_["stream_1"].format(
                 user,
@@ -167,7 +167,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":
             button = telegram_markup(_, chat_id)
-            run = await message.reply_photo(
+            run = await message.reply_video(
                 photo=config.TELEGRAM_AUDIO_URL
                 if str(streamtype) == "audio"
                 else config.TELEGRAM_VIDEO_URL,
@@ -178,7 +178,7 @@ async def skip(cli, message: Message, _, chat_id):
             db[chat_id][0]["markup"] = "tg"
         elif videoid == "soundcloud":
             button = telegram_markup(_, chat_id)
-            run = await message.reply_photo(
+            run = await message.reply_video(
                 photo=config.SOUNCLOUD_IMG_URL
                 if str(streamtype) == "audio"
                 else config.TELEGRAM_VIDEO_URL,
@@ -190,7 +190,7 @@ async def skip(cli, message: Message, _, chat_id):
         else:
             button = stream_markup(_, videoid, chat_id)
             img = await gen_thumb(videoid, chat_id)
-            run = await message.reply_photo(
+            run = await message.reply_video(
                 photo=img,
                 caption=_["stream_1"].format(
                     user,
