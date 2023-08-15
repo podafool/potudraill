@@ -25,7 +25,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001972623867"))
 
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
 
-OWNER_ID = list(map(int, getenv("OWNER_ID", "655594746").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "OWNER_ID").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
@@ -35,7 +35,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/SVDsong/SVD-insane",
+    "https://github.com/Mandaiya/potudrail/",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
@@ -78,7 +78,7 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION",  None)
+STRING1 = getenv("STRING_SESSION",  "BQAvUwByudvP3r5A7dZB-SHb5DgcQwIgTD6rlpy0me9nrQtI7b_dRpiBFVIXkvLEYd60l-qMK8NLFimlnWhU7r6k5dFk2jRRRiQ5wzL6Naqb80ZBpm8xU6dv2aVe-FYMqYSDcIFXcHq9FzBgl4RXS8RoM10z4KKxVMX9opM911Hu82TbU2Gj15xfL3pTv9oqJAoub5M5GZDCtcf3z09S5J6Y1Eu066gGZF7rCyMSuJme514czQn_g6ftTpnkva6dAWEUtDYRBV-yPEvXciwQVNuQqocVCAHcilm5VQrShsEHOrZtqjmrmoq_Ux6jQ944eJ63rjzpfL_A-t2DSmQ4ijKJAAAAATmDeAIA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
