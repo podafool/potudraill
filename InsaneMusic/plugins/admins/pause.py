@@ -30,4 +30,4 @@ async def pause_admin(cli, message: Message, _, chat_id):
     await music_off(chat_id)
     await Insane.pause_stream(chat_id)
     await bot.send_animation("https://example.com/path_to_gif.gif")
-                 caption=_["admin_2"].format(message.from_user.mention), disable_web_page_preview=True)
+                 caption=_["admin_2"].format(message.from_user.mention), disable_web_page_preview=True
