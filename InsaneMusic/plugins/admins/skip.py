@@ -52,11 +52,11 @@ async def skip(cli, message: Message, _, chat_id):
                                     # Send the GIF as a reply to the message
                                     await bot.send_animation(
                                         chat_id=chat_id,
-                                        animation="https://telegra.ph/file/e755ce78fd425bbcb696f.mp4"
-                                    )
+                                        animation="https://telegra.ph/file/e755ce78fd425bbcb696f.mp4",
                                         caption=_["admin_10"].format(
                                             message.from_user.mention
                                         )
+                                    )
                                     await Insane.stop_stream(chat_id)
                                 except:
                                     return
