@@ -35,14 +35,14 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Mandaiya/potudrail/",
+    "https://github.com/podafool/potudraill",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/universe_we_are")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/SVD_support_group")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Puthusa_yosi")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Team_Hypers_Networks")
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
 
@@ -78,7 +78,7 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION",  "BQAvUwByudvP3r5A7dZB-SHb5DgcQwIgTD6rlpy0me9nrQtI7b_dRpiBFVIXkvLEYd60l-qMK8NLFimlnWhU7r6k5dFk2jRRRiQ5wzL6Naqb80ZBpm8xU6dv2aVe-FYMqYSDcIFXcHq9FzBgl4RXS8RoM10z4KKxVMX9opM911Hu82TbU2Gj15xfL3pTv9oqJAoub5M5GZDCtcf3z09S5J6Y1Eu066gGZF7rCyMSuJme514czQn_g6ftTpnkva6dAWEUtDYRBV-yPEvXciwQVNuQqocVCAHcilm5VQrShsEHOrZtqjmrmoq_Ux6jQ944eJ63rjzpfL_A-t2DSmQ4ijKJAAAAATmDeAIA")
+STRING1 = getenv("STRING_SESSION",  None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -97,12 +97,12 @@ clean = {}
 autoclean = []
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/227d133eaac85b0e538d1.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/c7fc58423bbdac8159654.mp4"
 )
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://telegra.ph/file/86f81220c410743f1e1b1.jpg",
+    "https://telegra.ph/file/75aae54314783b81f553c.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
